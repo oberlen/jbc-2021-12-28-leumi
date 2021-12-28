@@ -1,0 +1,33 @@
+/* Layout General Styling: */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    font-size: x-large;
+    background-image: linear-gradient(45deg, lightblue, white);
+}
+
+.container {
+    height: 100%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 15% 80% 5%;
+}
+
+header {
+    grid-column: span 6;
+}
+main {
+    grid-column: span 4;
+}
+footer {
+    grid-column: span 6;
+}
+
+/* Set border for the entire section + for each tag inside the section: */
+section, section > * {
+    border: 1px solid black;
+}

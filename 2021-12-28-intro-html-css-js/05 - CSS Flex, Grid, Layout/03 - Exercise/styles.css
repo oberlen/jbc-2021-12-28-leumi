@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    height: 200px;
+    flex-basis: 20%;
+}
+
+img:nth-child(2) {
+    flex-basis: 40%;
+}

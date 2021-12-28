@@ -1,0 +1,25 @@
+p {
+    text-align: center;
+    text-decoration: underline;
+    color: green;
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+    text-decoration: underline;
+}
+
+input {
+    background-color: yellow;
+    /* border-color: black;
+    border-style: dashed;
+    border-width: 5px; */
+    /* border: 5px dashed black; */
+    border: 2px solid black;
+}
+
+button {
+    background-color: darkcyan;
+    color: white;
+}

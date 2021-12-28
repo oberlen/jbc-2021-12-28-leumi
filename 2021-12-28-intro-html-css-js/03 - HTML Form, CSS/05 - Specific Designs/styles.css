@@ -1,0 +1,17 @@
+body {
+    /* background-color: lightblue; */
+
+    /* background-image: url(assets/images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; */
+
+    background-image: url(assets/images/tile.jpg);
+}
+
+h1 {
+    text-align: center;
+}
+
+.menu {
+    text-align: center;
+}

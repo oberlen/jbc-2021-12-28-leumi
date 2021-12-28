@@ -1,0 +1,26 @@
+h1, h2 {
+    color: magenta;
+    text-align: center;
+}
+
+p.beautiful {
+    color: red;
+}
+
+.large {
+    font-size: xx-large;
+}
+
+.colorful {
+    background-color: gold;
+    color: darkcyan;
+}
+
+p span { /* each span that is somewhere inside p */
+    color: green;
+}
+
+p > span { /* each span that is directly inside p */
+    background-color: lightcoral;
+}
+

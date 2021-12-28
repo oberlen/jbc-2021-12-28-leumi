@@ -1,0 +1,109 @@
+div {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+    background-color: orange;
+    font-size: x-large;
+}
+
+/* גישה לרכיבים ספציפיים מבין רשימת רכיבים */
+div:first-child {
+    background-color: palegoldenrod;
+}
+div:first-child > span:nth-child(even) { /* nth = ...המספר ה nth-child = ...הילד ה nth-child(5) = הילד החמישי the child are for the same parent */
+    color: green;
+}
+div:first-child > span:nth-child(odd) {
+    color: red;
+}
+
+/* Resize - שינוי גודל הרכיב ע"י המשתמש*/
+div:nth-child(2) {
+    resize: both; /* width + height */
+    overflow: auto;
+}
+
+div:nth-child(3) {
+    /* border-radius: 20px; */
+    /* border-radius: 10px 40px; */
+    border-radius: 10px 20px 30px 40px;
+}
+
+div:nth-child(4) {
+    box-shadow: 10px 5px 15px gray; /* x y blur color */
+    text-shadow: 5px 5px 2px blue;
+}
+
+div:nth-child(5) {
+    /* background-image: linear-gradient(red, green, blue); */
+    background-image: linear-gradient(45deg, red, black, yellow);
+}
+
+div:nth-child(6) {
+    /* transform: rotate(30deg); */
+    /* transform: skew(30deg); */
+    /* transform: scale(2); */
+    /* transform: scale(-1.5, -2); */
+    /* transform: translate(100px, -200px); */
+    transform: scale(1.5) rotate(45deg) translate(100px, -200px);
+}
+
+div:nth-child(7):hover {
+    /* transition: background-color 2s, box-shadow 2s; */
+    transition: all 2s;
+    background-color: green;
+    box-shadow: 10px 10px 10px gray;
+}
+div:nth-child(7) {
+    transition: all 2s;
+}
+
+@keyframes CoolAnimation { /* keyframes = שלבי האנימציה CoolAnimation = שם מומצא */
+    from {
+        background-color: orange;
+        box-shadow: none;
+    }
+    to {
+        background-color: green;
+        box-shadow: 10px 10px 10px gray;
+    }
+}
+
+div:nth-child(8):hover {
+    /* animation: CoolAnimation 2s infinite linear alternate; */ /* infinite = ביצוע האנימציה ללא הפסקה linear = הפעלת האנימציה בצורה לינארית מבחינת המהירות, alternate = החזרת האנימציה חזרה בצורה אוטומטית */
+    /* animation-iteration-count: 2; */
+    animation: CoolAnimation 2s forwards;
+}
+
+div:nth-child(9) {
+    font-family: CoolFont;
+}
+
+@font-face { /* פקודה המאפשרת לייבא פונט ספציפי ומיוחד שיש לנו בקובץ נפרד */
+    src: url("assets/fonts/DaysaveDemoRegular.ttf");
+    font-family: CoolFont; /* CoolFont = שם מומצא */
+}
+
+section {
+    text-align: justify;
+
+    /* column-count: 4; */ /* מספר עמודות */
+    column-width: 250px; /* רוחב עמודות */
+    column-gap: 40px; /* המרווח בין העמודות */
+    column-rule: 10px double silver; /* קו הפרדה בין העמודות */
+}
+
+button { /* Default Button */
+    margin-left: 100px;
+    background-color: gray;
+    color: white;
+    transition: all 1s;
+}
+
+button:hover { /* Hovered Button */
+    transition: all 1s;
+    background-color: violet;
+    color: red;
+    transform: scale(2, 1);
+}

@@ -1,0 +1,36 @@
+/* 1. Element-Name Selector */
+p {
+    font-size: x-large;
+}
+
+/* 2. Class Selector */
+.beautiful {
+    color: blueviolet;
+    font-style: italic;
+}
+
+/* 3. ID Selector */
+#lastParagraph {
+    background-color: darkkhaki;
+    color: darkgreen;
+}
+
+/* 4a. General Attribute Selector */
+p[dir] {
+    color: red;
+}
+
+/* 4b. Exact Attribute Selector */
+p[dir="rtl"] {
+    text-decoration: underline;
+}
+
+/* 5a. Pseudo-Class Selector (:) */
+h1:hover {
+    color: magenta;
+}
+
+/* 5b. Pseudo-Element Selector (::) */
+p::selection {
+    background-color: yellow;
+}

@@ -1,0 +1,26 @@
+div {
+    border: 1px solid black;
+    width: 100px;
+    height: 50px;
+
+    /* Convert block element into inline element:  */
+    /* display: inline; */
+    display: inline-block;
+}
+
+a {
+    border: 1px solid blue;
+
+    /* Convert inline element into block element: */
+    display: block;
+}
+
+p {
+    border: 1px solid green;
+
+    /* Hide this element: */
+    /* display: none; */
+    visibility: hidden;
+}
+
+
