@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function getEvenRandomNumberAfterDelay(min, max, callback, errCallback) {
+        setTimeout(() => {
+          const num = Math.floor(Math.random() * (max - min + 1)) + min; // get random number between min and max
+          if (num % 2 === 0) {
+            callback(num);
+          } else {
+            errCallback();
+          }
+        }, 3000);
+      }
+
+      function successCallback(result) {
+        alert(result);
+      }
+
+      function errorCallback() {
+        console.error("Could not generate even random number");
+      }
+
+      getEvenRandomNumberAfterDelay(2, 5, successCallback, errorCallback);
+    </script>
+  </head>
+  <body></body>
+</html>

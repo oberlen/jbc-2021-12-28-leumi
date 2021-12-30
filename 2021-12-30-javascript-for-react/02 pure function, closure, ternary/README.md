@@ -1,0 +1,1 @@
+- Dan Abramov's take on [Closures](https://whatthefuck.is/closure)

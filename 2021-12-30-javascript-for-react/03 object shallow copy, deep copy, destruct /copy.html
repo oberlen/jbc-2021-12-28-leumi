@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    const myObj = {
+      x: 5,
+      y: 7,
+      foo: 'bar',
+      myFunc: function(){ alert('bala') },
+      baz: {
+        z: 6,
+        e: '78'
+      }
+    };
+
+    // shallow copy 
+    const secObj = {
+      ...myObj
+    };
+
+    // problem - will change myObj baz too!
+    secObj.baz.z = 8;
+
+    // how to deep copy?
+
+    // solution 1 deep copy - with problems (will not copy functions for example)
+    const deeply = JSON.parse(JSON.stringify(myObj));
+    console.log('solution 1', deeply);
+
+    // solution 2 https://web.dev/structured-clone/ - not supported yet! will be soon...
+    const myDeepCopy = structuredClone(myObj);
+    console.log('solution 2', myDeepCopy);
+
+    // solution 3 use library (https://underscorejs.org/#) (https://lodash.com/)
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

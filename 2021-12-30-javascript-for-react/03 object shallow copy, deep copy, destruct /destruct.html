@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    myObj = {
+      foo: 'bar',
+      x: 6,
+      y: 8,
+      myFunc: () => true
+    }
+
+    // const x = myObj.x;
+    // const foo = myObj.foo;
+
+    const {x, foo} = myObj;
+
+    document.write(`x: ${x} `);
+    document.write(`foo: ${foo}<br>`);
+
+
+    const {x: myX, foo: myFoo} = myObj;
+
+    document.write(`x: ${myX} `);
+    document.write(`foo: ${myFoo}`);
+
+
+
+    const myArr = [1, 2, 6, 8];
+
+    // const x1 = myArr[0];
+    // const y1 = myArr[1];
+    // const z1 = myArr[2];
+
+    const [x1, y1, z1] = myArr;
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

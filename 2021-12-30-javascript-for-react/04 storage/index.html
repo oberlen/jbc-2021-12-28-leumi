@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function saveToLocalStorage() {
+        const fullName = "my full name";
+        localStorage.setItem("fullName", fullName);
+      }
+
+      function delFromLocalStorage() {
+        localStorage.removeItem("fullName");
+      }
+
+      saveToLocalStorage();
+      // delToSessionStorage();
+
+      function saveToSessionStorage() {
+        const fullName = "my full name";
+        sessionStorage.setItem("fullName", fullName);
+      }
+
+      function delFromSessionStorage() {
+        sessionStorage.removeItem("fullName");
+      }
+
+      function saveCookie() {
+        const fullName = "John Bryce";
+
+        // Session Cookie (Non-Persistent Cookie):
+        // document.cookie = "userFullName=" + fullName;
+
+        // Persistent Cookie:
+        const now = new Date();
+        now.setMonth(now.getMonth() + 3);
+        document.cookie = "userFullName=" + fullName + ";expires=" + now;
+      }
+
+      saveCookie();
+
+      function loadCookie() {
+        alert(document.cookie);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

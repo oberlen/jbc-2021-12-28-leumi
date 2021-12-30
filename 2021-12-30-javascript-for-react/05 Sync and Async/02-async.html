@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function doSomething() {
+        setTimeout(() => {
+          let sum = 0;
+          for (let i = 1; i < 9000000000; i++) {
+            sum++;
+          }
+          console.log(sum);
+        }, 6000);
+      }
+
+      function test() {
+        console.log("start");
+        doSomething();
+        console.log("end");
+      }
+
+      test();
+    </script>
+  </head>
+  <body></body>
+</html>

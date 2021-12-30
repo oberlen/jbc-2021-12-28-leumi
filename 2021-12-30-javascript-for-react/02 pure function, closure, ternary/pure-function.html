@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+
+    // not pure function!
+    function notPure(a, b) {
+      a = b + 5;
+      return a; 
+    }
+
+    // pure function
+    function pure(a, b) {
+      const result = b + 5;
+      return result;
+    }
+
+    let foo = 4;
+    let bar = 5;
+
+    const result1 = notPure(foo, bar);
+    const result2 = pure(foo, bar);
+
+    document.write(`not pure: ${result1},  pure: ${result2}`);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

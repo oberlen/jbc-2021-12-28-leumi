@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // js code to get product list from the server
+      // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+      /// replacement to crudcrud https://www.npmjs.com/package/northwind-back-end
+
+      async function createProduct() {
+        const result = await fetch(
+          "https://crudcrud.com/api/70b59d6e03c348429d304f1edb1eca6c/products",
+          {
+            method: "POST",
+            body: JSON.stringify({ foo: "bar" }),
+          }
+        );
+        const products = await result.json();
+
+        console.log(products);
+      }
+
+      async function getProducts() {
+        const result = await fetch(
+          "https://crudcrud.com/api/70b59d6e03c348429d304f1edb1eca6c/products",
+          {
+            method: "GET",
+          }
+        );
+        const products = await result.json();
+
+        console.log(products);
+      }
+
+      createProduct();
+      getProducts();
+      // js code to add elements with products to body
+    </script>
+  </head>
+  <body></body>
+</html>

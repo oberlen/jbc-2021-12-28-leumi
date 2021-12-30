@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function getEvenRandomNumberAfterDelay(min, max) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const num = Math.floor(Math.random() * (max - min + 1)) + min; // get random number between min and max
+            if (num % 2 === 0) {
+              resolve(num);
+            } else {
+              reject("error");
+            }
+          }, 6000);
+        });
+      }
+
+      async function myAsyncFunc() {
+        try {
+          const res1 = await getEvenRandomNumberAfterDelay(20, 30); // אסינכרוני אבל עם await ולכן מתנהג כמו סינכרוני
+          console.log(res1); //  סינכרוני
+          // const res2 = await getEvenRandomNumberAfterDelay(20, 30);
+          // const res3 = await getEvenRandomNumberAfterDelay(20, 30);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+
+      myAsyncFunc();
+    </script>
+  </head>
+  <body>
+    <button>click me</button>
+  </body>
+</html>
